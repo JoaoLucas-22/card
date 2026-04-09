@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Force Runner';
+    src: url('assets/forcerunnersuperital.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cowboys';
+    src: url('assets/Cowboys 2.0.otf') format('opentype'); 
+}
+
+@font-face {
+    font-family: 'Compacta';
+    src: url('assets/Compacta Italic.otf') format('opentype'); 
+}
+
+body {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgb(8, 77, 0);
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 5px solid #ffffff3a;
+}
+
+header .logo {
+    width: 800px;
+    height: 80px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+header .logo img {
+    height: 90px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 5px;
+}
+
+header img {
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+header .logo h1{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-family: 'Force Runner', sans-serif;
+    letter-spacing: 2px;
+    
+    text-shadow: 
+        0 0 50px #00ff0093,  /* Aqui entra a cor do LED (verde) */
+        0 0 50px #00ff0093,  /* Espalhando mais a luz */
+        0 0 50px #00ff0093;  /* O clarão final de longe */    
+}
+
+main {
+    flex: 1;
+    background-image: url(assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main .card-container {
+    width: 90%;
+    max-width: 1900px;
+    margin: 20px auto;
+    display: flex;
+    gap: 1%;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+
+.card {
+    width: 350px;
+    height: 750px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    border: #00000085 3px solid;
+
+    position: relative;
+    border-radius: 15px;
+    transition: all 0.35s ease;
+
+    box-shadow: 0px 0px 0px #00000085, 0px 0px 40px #00000085;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    transition: 0.3s;
+    border-width: 4px;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px #ffffff, 0px 0px 40px #ffffff;
+    border: 3px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.222);
+}
+
+.card img {
+    width: 330px;
+    height: 300px;
+    border-radius: 10px;
+
+}
+
+.card h2 {
+   text-align: center;
+    margin-top: 20px;
+    font-family: 'Cowboys', sans-serif;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.card ul {
+    margin-left: 20px;
+    margin-top: 20px;
+    list-style: none;
+    color: white;
+}
+.card ul li{
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.card ul li::before{
+    content: '❕';
+    position: absolute;
+    left: 0;
+    font-size: 14;  
+}
+
+footer {
+    background-color: #b18d4f;
+    padding: 5px 10%;
+    border-top: 5px solid #ffffff3a;
+}
+
+footer p {
+    font-size: 20px;
+    height: 40px;
+    padding: 10px 10%;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #ffffff;
+    text-shadow: 
+        0 0 10px #503415,  /* Aqui entra a cor do LED (verde) */
+        0 0 20px #503415,  /* Espalhando mais a luz */
+        0 0 30px #503415;  /* O clarão final de longe */
+}
+
+
