@@ -15,8 +15,8 @@
 }
 
 @font-face {
-    font-family: 'Compacta';
-    src: url('assets/Compacta Italic.otf') format('opentype'); 
+    font-family: 'Biotrip';
+    src: url('assets/BiotripSerif-BoldItalic.ttf') format('truetype'); 
 }
 
 body {
@@ -151,6 +151,7 @@ main .card-container {
     margin-top: 20px;
     list-style: none;
     color: white;
+    font-family: 'Biotrip', sans-serif;
 }
 .card ul li{
     margin-bottom: 12px;
