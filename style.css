@@ -15,7 +15,7 @@
 }
 
 @font-face {
-    font-family: 'Biotrip';
+    font-family: 'Biotripitalic';
     src: url('assets/BiotripSerif-BoldItalic.ttf') format('truetype'); 
 }
 
@@ -151,7 +151,7 @@ main .card-container {
     margin-top: 20px;
     list-style: none;
     color: white;
-    font-family: 'Biotrip', sans-serif;
+    font-family: 'Biotripitalic', sans-serif;
 }
 .card ul li{
     margin-bottom: 12px;
@@ -163,7 +163,7 @@ main .card-container {
     content: '❕';
     position: absolute;
     left: 0;
-    font-size: 14;  
+    font-size: 14px;  
 }
 
 footer {
