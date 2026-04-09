@@ -14,9 +14,17 @@
     src: url('assets/Cowboys 2.0.otf') format('opentype'); 
 }
 
+/* 1. Primeiro, carregue a fonte que vai ficar nas LETRAS */
 @font-face {
-    font-family: 'Biotripitalic';
-    src: url('assets/BiotripSerif-BoldItalic.ttf') format('truetype'); 
+    font-family: 'FonteMix';
+    src: url('assets/Cowboys 2.0.otf') format('opentype'); /* Troque pelo nome exato do arquivo que você quer nas letras */
+}
+
+/* 2. Agora, carregue a Force Runner e aplique ela APENAS nos NÚMEROS */
+@font-face {
+    font-family: 'FonteMix';
+    src: url('assets/ForceRunner.otf') format('opentype'); /* Troque pelo nome exato do arquivo da Force Runner */
+    unicode-range: U+0030-0039; /* Esse é o comando mágico (0 ao 9) */
 }
 
 body {
@@ -151,7 +159,7 @@ main .card-container {
     margin-top: 20px;
     list-style: none;
     color: white;
-    font-family: 'Biotripitalic', sans-serif;
+    font-family: 'FonteMix', sans-serif;
 }
 .card ul li{
     margin-bottom: 12px;
