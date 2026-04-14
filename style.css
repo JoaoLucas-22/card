@@ -17,13 +17,13 @@
 /* 1. Primeiro, carregue a fonte que vai ficar nas LETRAS */
 @font-face {
     font-family: 'FonteMix';
-    src: url('assets/Cowboys 2.0.otf') format('opentype'); /* Troque pelo nome exato do arquivo que você quer nas letras */
+    src: url('assets/BiotripSerif-BoldItalic.ttf') format('truetype'); /* Troque pelo nome exato do arquivo que você quer nas letras */
 }
 
 /* 2. Agora, carregue a Force Runner e aplique ela APENAS nos NÚMEROS */
 @font-face {
     font-family: 'FonteMix';
-    src: url('assets/forcerunnersuperital.ttf') format('truetype'); /* Troque pelo nome exato do arquivo da Force Runner */
+    src: url('assets/forcerunnersemital.ttf') format('truetype'); /* Troque pelo nome exato do arquivo da Force Runner */
     unicode-range: U+0030-0039; /* Esse é o comando mágico (0 ao 9) */
 }
 
@@ -117,7 +117,6 @@ main .card-container {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     color: black;
-    border-radius: 10px;
     padding: 10px;
     margin: 20px;
     border: #00000085 3px solid;
@@ -196,3 +195,52 @@ footer p {
 }
 
 
+.marca-card {
+    width: 50%;
+    margin: 10px auto;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+
+    border-radius: 15px;
+    border: 2px solid #00000080;
+
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.marca-card:hover {
+    transform: scale(1.02);
+}
+
+.marca-card h2 {
+    color: white;
+    font-family: 'Force Runner';
+    margin: 10px auto;
+    font-size: 50px;
+}
+
+.marca-card .pais {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+/* INFO ESCONDIDA */
+.marca-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+    color: white;
+    margin-top: 10px;
+    font-family: 'FonteMix', sans-serif;
+    font-size: 25px;
+}
+
+/* QUANDO ABRE */
+.marca-card.ativo .marca-info {
+    max-height: 300px;
+}
